@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'home#index'
+
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
   get 'sign_in', to: 'sessions#new'
@@ -15,4 +15,22 @@ Rails.application.routes.draw do
   post 'password/reset', to: 'password_resets#create'
   get 'password/reset/edit', to: 'password_resets#edit'
   patch 'password/reset/edit', to: 'password_resets#update'
+
+
+  get 'diagnoses/index'
+  get 'homepage/index'
+  
+  root "homepage#index"
+
+  get "/login",
+    to: "home#index",
+    as: "Home_index"
+
+  get "/diagnoses",
+    to: "diagnoses#index",
+    as: "Diagnoses_index"
+
+  get "/diagnoses/result",
+    to: "diagnoses_result#index",
+    as: "DiagnosesResult_index"
 end
