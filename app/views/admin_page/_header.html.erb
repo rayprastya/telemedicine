@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="admin.css">
+
+
+    
+    <title>Admin Page</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+  <body> 
+        <header>
+          <div class="container">
+              <ul>
+                <div class="header-left">
+                  <li><%= link_to 'Admin', root_path,  class:"home"  %></li>
+                  <li><%= link_to 'Article', articles_path,  class:"btnnav-bar"  %></li>
+                  <li><%= link_to 'Medicine', medicines_path,  class:"btnnav-bar"  %></li>
+                  <li><%= link_to 'Medicine', medicines_path,  class:"btnnav-bar"  %></li>
+                  <li><%= link_to 'Medicine', medicines_path,  class:"btnnav-bar"  %></li>
+                  <li><%= link_to 'Medicine', medicines_path,  class:"btnnav-bar"  %></li>
+                </div>
+                <div class="header-right">
+                  <li><a class="login" href="/login">Logout</a></li>
+                </div>
+              </ul>
+          </div>
+        </header>
