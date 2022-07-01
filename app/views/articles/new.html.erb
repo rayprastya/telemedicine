@@ -1,9 +1,13 @@
-<h1>New article</h1>
+    <%= render 'admin_page/header' %> 
 
-<%= render "form", article: @article %>
+
+<br>
+<div class="container">
+  <h1>New article</h1>
+  
+  <%= render "form", article: @article %>
 
 <br>
 
-<div>
-  <%= link_to "Back to articles", articles_path %>
+  <%= link_to "< Back", articles_path,class:"btn btn-outline-secondary" %>
 </div>
