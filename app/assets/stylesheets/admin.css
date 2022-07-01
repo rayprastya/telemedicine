@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body{
+    font-family: 'Comfortaa', cursive;
+}
+
+
+header{
+    height:65px;
+    padding-top:10px;
+}
+
+.container{
+    width:100%;
+    margin-top:10px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header-left li {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    float: left;
+    text-decoration: none;
+    font-size:24px;
+    margin-left:20px;
+}
+
+.header-right{
+    margin-left:0;
+}
+
+.header-right li {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    float: right;
+    text-decoration: none;
+    font-size:24px;
+}
+
+.header-left a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.header-right a{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    text-align:right;
+    color: #0080FF;
+}
+
+.home{
+    background-color: #0080FF;
+    padding:10px 25px;
+    border-radius:50px;
+    text-decoration: none;
+}
+
+.home:hover{
+    text-decoration: none;
+}
+
+.btnnav-bar{
+    border: 1px solid #ffffff;
+    padding:10px 25px;
+    border-radius:50px;
+}
+
+.btnnav-bar:hover{
+    border: 1px solid #0080FF;
+    padding:10px 25px;
+    border-radius:50px;
+    text-decoration: none;
+}
+
+.header-left .home{
+    color: white;
+}
+
+.login{
+    border: 1px solid #0080FF;
+    padding:10px 25px;
+    border-radius:50px;
+}
+
+.header-right .login{
+    color: #0080FF;
+}
+
+.top-wrapper{
+height: 1000px;
+}
+
+.top-right{
+    width:1220px;
+    height: 900px;
+    float:right;
+}
+
+.top-right img{
+    padding-top: 50px;
+    float:right;
+    align:right;
+  position:relative;
+}
+
+.top-left{
+    height: 1000px;
+    width: auto;
+    position:absolute;
+}
+
+.left-welcome h3{
+    font-style: normal;
+    width: 600px;
+    font-weight: 500;
+    font-size: 50px;
+    padding-top: 200px;
+    padding-left: 120px;
+    line-height: 60px;
+    
+}
+
+.left-welcome h4{
+    width: 600px;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 27px;
+    padding-left: 125px;
+    
+}
+.left-welcome span{
+    color: #0080FF;
+}
