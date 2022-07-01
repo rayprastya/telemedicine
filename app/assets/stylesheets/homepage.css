@@ -70,6 +70,7 @@ ul{
     padding:10px 25px;
     border-radius:50px;
     text-decoration: none;
+    text-decoration: none;
 }
 
 .home:hover{
@@ -80,6 +81,7 @@ ul{
     border: 1px solid #ffffff;
     padding:10px 25px;
     border-radius:50px;
+    text-decoration: none;
 }
 
 .btnnav-telemedicine:hover{
@@ -93,6 +95,7 @@ ul{
     border: 1px solid #ffffff;
     padding:10px 25px;
     border-radius:50px;
+    text-decoration: none;
 }
 
 .btnnav-article:hover{
@@ -106,6 +109,7 @@ ul{
     border: 1px solid #ffffff;
     padding:10px 25px;
     border-radius:50px;
+    text-decoration: none;
 }
 
 .btnnav-contact:hover{
@@ -124,6 +128,7 @@ ul{
     border: 1px solid #0080FF;
     padding:10px 25px;
     border-radius:50px;
+    text-decoration: none;
 }
 
 .header-right .login{
@@ -199,6 +204,7 @@ height: 1000px;
     line-height: 27px;
     color: white;
     margin-left:155px;
+    text-decoration: none;
 }
 
 .button-test:hover {
@@ -329,6 +335,7 @@ height: 1000px;
     border-radius:50px;
     color: #ffffff;
     margin-top:30px;
+    text-decoration: none;
 }
 
 .button-chat:hover {
@@ -348,6 +355,7 @@ height: 1000px;
     line-height: 27px;
     color: white;
     float:right;
+    text-decoration: none;
 }
 
 .button-telemedicine:hover {
@@ -418,6 +426,7 @@ height: 1000px;
     line-height: 27px;
     float: right;
     color: white;
+    text-decoration: none;
 }
 
 .button-read:hover {
@@ -436,6 +445,7 @@ height: 1000px;
     line-height: 27px;
     color: white;
     float:right;
+    text-decoration: none;
 }
 
 .button-article:hover {
@@ -514,6 +524,7 @@ height: 1000px;
     line-height: 27px;
     color: white;
     float:right;
+    text-decoration: none;
 }
 
 .button-medicine:hover {

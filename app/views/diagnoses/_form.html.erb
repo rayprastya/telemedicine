@@ -1,0 +1,153 @@
+<%= form_with(model: @diagnoses) do |form| %>
+
+  <div class="question-wrapper">
+    <h3>1. Merasa tidak nyaman dalam melakukan aktivitas sehari-hari</h3>
+    <%= form.radio_button :q1, "0" %>
+    <%= form.label :answer_1, "Tidak sama sekali"%>
+
+    <%= form.radio_button :q1, "1"%>
+    <%= form.label :answer_2, "Selama beberapa hari"%>
+
+    <%= form.radio_button :q1, "2"%>
+    <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+    <%= form.radio_button :q1, "3"%>
+    <%= form.label :answer_4, "Hampir setiap hari"%>
+  </div>
+
+  <div class="question-wrapper">
+  <h3>2. Merasa down, depresi dan tidak ada harapan</h3>
+    <%= form.radio_button :q2, "0"%>
+    <%= form.label :answer_1, "Tidak sama sekali"%>
+
+    <%= form.radio_button :q2, "1"%>
+    <%= form.label :answer_2, "Selama beberapa hari"%>
+
+    <%= form.radio_button :q2, "2"%>
+    <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+    <%= form.radio_button :q2, "3"%>
+    <%= form.label :answer_4, "Hampir setiap hari"%>
+  </div>
+  <div class="question-wrapper">
+  <h3>3. TIdak bisa tidur atau terlalu banyak tidur</h3>
+    <%= form.radio_button :q3, "0"%>
+    <%= form.label :answer_1, "Tidak sama sekali"%>
+
+    <%= form.radio_button :q3, "1"%>
+    <%= form.label :answer_2, "Selama beberapa hari"%>
+
+    <%= form.radio_button :q3, "2"%>
+    <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+    <%= form.radio_button :q3, "3"%>
+    <%= form.label :answer_4, "Hampir setiap hari"%>
+  </div>
+    <div class="question-wrapper">
+  <h3>4. Merasa cepat lelah</h3>
+    <%= form.radio_button :q4, "0"%>
+    <%= form.label :answer_1, "Tidak sama sekali"%>
+
+    <%= form.radio_button :q4, "1"%>
+    <%= form.label :answer_2, "Selama beberapa hari"%>
+
+    <%= form.radio_button :q4, "2"%>
+    <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+    <%= form.radio_button :q4, "3"%>
+    <%= form.label :answer_4, "Hampir setiap hari"%>
+  </div>
+  <div class="question-wrapper">
+
+    <h3>5. Tidak nafsu makan atau terlalu banyak makan</h3>
+    <%= form.radio_button :q5, "0"%>
+    <%= form.label :answer_1, "Tidak sama sekali"%>
+
+    <%= form.radio_button :q5, "1"%>
+    <%= form.label :answer_2, "Selama beberapa hari"%>
+
+    <%= form.radio_button :q5, "2"%>
+    <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+    <%= form.radio_button :q5, "3"%>
+    <%= form.label :answer_4, "Hampir setiap hari"%>
+  </div>
+  <div class="question-wrapper">
+    <h3>6. Merasa tidak enak dengan diri sendiri, atau merasa sebagai kegagalan bagi diri sendiri atau keluarga</h3>
+    <%= form.radio_button :q6, "0"%>
+    <%= form.label :answer_1, "Tidak sama sekali"%>
+
+    <%= form.radio_button :q6, "1"%>
+    <%= form.label :answer_2, "Selama beberapa hari"%>
+
+    <%= form.radio_button :q6, "2"%>
+    <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+    <%= form.radio_button :q6, "3"%>
+    <%= form.label :answer_4, "Hampir setiap hari"%>
+  </div>
+
+  <div class="question-wrapper">
+
+    <h3>7. Sulit untuk fokus pada pekerjaan, seperti membaca atau menonton</h3>
+    <%= form.radio_button :q7, "0"%>
+    <%= form.label :answer_1, "Tidak sama sekali"%>
+
+    <%= form.radio_button :q7, "1"%>
+    <%= form.label :answer_2, "Selama beberapa hari"%>
+
+    <%= form.radio_button :q7, "2"%>
+    <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+    <%= form.radio_button :q7, "3"%>
+    <%= form.label :answer_4, "Hampir setiap hari"%>
+  </div>
+
+    <div class="question-wrapper">
+      <h3>8. Bergerak atau berbicara lebih lambat agar orang lain memperhatikan, atau kebalikannya - Anda lebih menunjukkan aktivitas fisik yang lebih dari biasanya</h3>
+      <%= form.radio_button :q8, "0"%>
+      <%= form.label :answer_1, "Tidak sama sekali"%>
+
+      <%= form.radio_button :q8, "1"%>
+      <%= form.label :answer_2, "Selama beberapa hari"%>
+
+      <%= form.radio_button :q8, "2"%>
+      <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+      <%= form.radio_button :q8, "3"%>
+      <%= form.label :answer_4, "Hampir setiap hari"%>
+    </div>
+
+    <div class="question-wrapper">
+        <h3>9. Pemikiran kalau anda lebih baik tiada, atau menyakiti diri sendiri secara fisik</h3>
+      <%= form.radio_button :q9, "0"%>
+      <%= form.label :answer_1, "Tidak sama sekali"%>
+
+      <%= form.radio_button :q9, "1"%>
+      <%= form.label :answer_2, "Selama beberapa hari"%>
+
+      <%= form.radio_button :q9, "2"%>
+      <%= form.label :answer_3, "Beberapa hari seminggu"%>
+
+      <%= form.radio_button :q9, "3"%>
+      <%= form.label :answer_4, "Hampir setiap hari"%>
+    </div>
+
+    <div class="question-wrapper">
+      <h3>10. Jika anda memiliki masalah yang telah disebutkan diatas, seberapa sulitkah masalah tersebut mempengaruhi pekerjaan anda, saat di rumah, atau dengan orang lain?</h3>
+      <%= form.radio_button :q10, "0"%>
+      <%= form.label :answer_1, "Tidak sulit sama sekali"%>
+
+      <%= form.radio_button :q10, "1"%>
+      <%= form.label :answer_2, "Terkadang terasa sulit"%>
+
+      <%= form.radio_button :q10, "2"%>
+      <%= form.label :answer_3, "Sulit"%>
+
+      <%= form.radio_button :q10, "3"%>
+      <%= form.label :answer_4, "Sangat sulit"%>
+
+    </div>
+  
+    <%= form.submit "Hasil", class: 'btn-submit'%>
+<% end %>

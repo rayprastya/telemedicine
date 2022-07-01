@@ -1,0 +1,52 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Telemedicine</title>
+        <link rel="stylesheet" href="result.css">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <div class="header-left">
+                <li><a class="btnnav-home" href="/">Home</a></li>
+                <li><a class="btnnav-telemedicine" href="#telemedicine">Telemedicine</a></li>
+                <li><a class="btnnav-article" href="#article">Artikel</a></li>
+                <li><a class="btnnav-contact" href="#contact">Kontak</a></li>
+                </div>
+                <div class="header-right">
+                <li><a class="login" href="#login">Login</a></li>
+                </div>
+            </ul>
+        </header>
+        <div class="result-container">
+            <h2>Kami telah menerima hasil test anda, berikut beberapa kegiatan yang dapat anda lakukan!<h2>
+            <div class="result-wrapper">
+                <%= @diagnoses %>
+                <% if @diagnoses >= 20 %>
+                    <div class="result">
+                        <h4> Berceritalah dengan orang yang kamu percaya </h4>
+                        <h4> Selesaikan permasalahan satu per satu</h4>
+                        <h4> Percaya bahwa suatu masalah pasti ada jalan keluarnya</h4>
+                        <h4> Rajin berolahraga </h4>
+                        <h4> Jalankan hobi atau sesuatu yang membuatmu senang </h4>
+                        <h4> Hubungi tenaga professionall </h4>
+                    </div> 
+                <% elsif @diagnoses >= 10 %>
+                        <h4> Sadari bahwa kecemasanmu adalah hal yang wajar </h4>
+                        <h4> Cari Pengalihan</h4>
+                        <h4> Temukan cara baru untuk berkomunikasi dengan teman-temanmu</h4>
+                        <h4> Fokuslah pada dirimu </h4>
+                        <h4> Selami perasaanmu </h4>
+                        <h4> Berbaik hatilah pada diri sendiri dan orang lain </h4>
+                <% elsif @diagnoses >= 0 %>
+                        <h4> Pertahankan kegiatanmu selama ini </h4>
+                        <h4> Jangan dekati hal-hal yang tidak kamu sukai</h4>
+                        <h4> Mempersibuk diri dengan kegiatan yang lebih bermanfaat</h4>
+                        <h4> Kamu bisa mulai menolong orang lain </h4>
+                        <h4> Jaga kesehatan fisik </h4>
+                <% end %>
+            </div>
+        </div>
+    </body>
+</html>

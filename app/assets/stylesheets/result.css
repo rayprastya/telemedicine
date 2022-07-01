@@ -1,0 +1,18 @@
+body{
+    font-family: 'Comfortaa', cursive;
+    margin-bottom:200px;
+}
+
+.result-wrapper{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 33px;
+}
+
+.result-container h2{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+    color:#0080FF;
+    
+}
