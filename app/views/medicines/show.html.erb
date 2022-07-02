@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @medicine %>
-
-<div>
-  <%= link_to "Edit this medicine", edit_medicine_path(@medicine) %> |
-  <%= link_to "Back to medicines", medicines_path %>
-
-  <%= button_to "Destroy this medicine", @medicine, method: :delete %>
+    <%= render 'admin_page/header' %> 
+<br>
+<div class="container">
+ 
+  <p style="color: green"><%= notice %></p>
+  
+  <%= render @medicine %>
+  
+  <div>
+    <%= link_to "< Back", medicines_path,class:"btn btn-outline-secondary" %>
+  </div>
 </div>
