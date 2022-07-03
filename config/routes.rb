@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :telemedicines
+  resources :doctors
   resources :articles
 
   get 'admin_page/index'
@@ -38,4 +40,16 @@ Rails.application.routes.draw do
   post "/diagnoses/index",
     to: "diagnoses#result",
     as: "diagnoses_result"
+
+  get "/article",
+    to: "articles#user_index",
+    as: "user_index_article"
+
+  get "/medicine",
+    to: "medicines#user_index",
+    as: "user_index_medicine"
+
+
+
+
 end

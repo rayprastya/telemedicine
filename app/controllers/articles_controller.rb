@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def user_index
+    @articles = Article.all
+  end
+
   # GET /articles/1 or /articles/1.json
   def show
   end
@@ -67,4 +71,5 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :description, :author)
     end
+
 end

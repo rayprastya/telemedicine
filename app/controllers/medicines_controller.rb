@@ -6,6 +6,10 @@ class MedicinesController < ApplicationController
     @medicines = Medicine.all
   end
 
+  def user_index
+    @medicines = Medicine.all
+  end
+
   # GET /medicines/1 or /medicines/1.json
   def show
   end
