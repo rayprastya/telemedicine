@@ -35,9 +35,14 @@ ul{
     margin-left:20px;
 }
 
+.header-right h4{
+    color: #0080FF;
+}
+
 .header-right{
     margin-left:0;
 }
+
 
 .header-right li {
     display: block;
@@ -299,7 +304,7 @@ height: 1000px;
 }
 
 .dcard-bottom{
-    width: 325px;
+    width: 305px;
     height: 150px;
     margin-top:275px;
     border-radius: 0px 0px 25px 25px;
@@ -391,7 +396,7 @@ height: 1000px;
 
 .acard{
     height:500px;
-    width:800px;
+    width:900px;
     background-color: gray;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 25px;
@@ -399,7 +404,7 @@ height: 1000px;
 
 .acard-bottom{
     height:180px;
-    width:800px;
+    width:760px;
     margin-top:320px;
     padding:20px;
     background: rgba(255, 255, 255, 0.9);

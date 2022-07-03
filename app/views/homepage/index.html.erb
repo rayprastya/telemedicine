@@ -18,12 +18,16 @@
           <ul>
             <div class="header-left">
               <li><a class="home" href="/">Home</a></li>
-              <li><a class="btnnav-telemedicine" href="#telemedicine">Telemedicine</a></li>
-              <li><a class="btnnav-article" href="#article">Artikel</a></li>
-              <li><a class="btnnav-contact" href="#contact">Kontak</a></li>
+              <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
+              <li><a class="btnnav-article" href="/article">Artikel</a></li>
+              <li><a class="btnnav-contact" href="/contact">Kontak</a></li>
             </div>
             <div class="header-right">
+              <% if Current.user%>
+                <li><p> <a href="/login">Hello <%= Current.user.username %> !</p></a></li>
+              <% else %>
               <li><a class="login" href="/login">Login</a></li>
+              <% end %>
             </div>
           </ul>
       </div>
@@ -117,7 +121,7 @@
           </div>
         </div>
       </div>
-      <a class="button-telemedicine" href="#telemedicine">Lebih lanjut</a>
+      <a class="button-telemedicine" href="/telemedicine">Lebih lanjut</a>
     </div>
     <div class="article-wrapper">
       <h2>Baca artikel <span>Kesehatan Mental</span></h3>
@@ -137,7 +141,7 @@
             </div>
           </div>
         </div>
-        <a class="button-article" href="#article">Lebih lanjut</a>
+        <a class="button-article" href="/article">Lebih lanjut</a>
     </div>
     <div class="medicine-wrapper">
       <h2>Informasi <span>Obat</span> dan <span>Vitamin</span></h3>
@@ -173,7 +177,7 @@
           <h4>Nama Obat</h4>
         </div>
       </div>
-      <a class="button-medicine" href="#article">Lebih lanjut</a>
+      <a class="button-medicine" href="/medicine">Lebih lanjut</a>
     </div>
   </body>
 </html>

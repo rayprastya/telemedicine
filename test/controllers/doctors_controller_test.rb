@@ -17,7 +17,11 @@ class DoctorsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create doctor" do
     assert_difference("Doctor.count") do
+<<<<<<< HEAD
+      post doctors_url, params: { doctor: {  } }
+=======
       post doctors_url, params: { doctor: { account_id: @doctor.account_id, email: @doctor.email, experience: @doctor.experience, gender: @doctor.gender, name: @doctor.name, no_hp: @doctor.no_hp } }
+>>>>>>> 5703ed2535fb91942061211ee2017f110c74b409
     end
 
     assert_redirected_to doctor_url(Doctor.last)
@@ -34,7 +38,11 @@ class DoctorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update doctor" do
+<<<<<<< HEAD
+    patch doctor_url(@doctor), params: { doctor: {  } }
+=======
     patch doctor_url(@doctor), params: { doctor: { account_id: @doctor.account_id, email: @doctor.email, experience: @doctor.experience, gender: @doctor.gender, name: @doctor.name, no_hp: @doctor.no_hp } }
+>>>>>>> 5703ed2535fb91942061211ee2017f110c74b409
     assert_redirected_to doctor_url(@doctor)
   end
 

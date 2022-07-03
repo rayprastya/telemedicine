@@ -1,11 +1,46 @@
-<h1>Authentication</h1>
 
-  <% if Current.user %>
-    Logged in as: <%= Current.user.username %><br>
-    <%= link_to 'Edit Password', edit_password_path %>
-    <%= button_to 'Logout', logout_path, method: :delete %>
-    <% else %>
-    <%= link_to 'Sign Up', sign_up_path %>
-    or
-    <%= link_to 'Login', sign_in_path %>
-  <% end %>
+  <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Telemedicine</title>
+        <link rel="stylesheet" href="/stylesheet/login.css">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <div class="header-left">
+                <li><a class="btnnav-home" href="/">Home</a></li>
+                <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
+                <li><a class="btnnav-article" href="/article">Artikel</a></li>
+                <li><a class="btnnav-contact" href="/contact">Kontak</a></li>
+                </div>
+                <div class="header-right">
+                <li><a class="login" href="/login">Login</a></li>
+                </div>
+            </ul>
+        </header>
+    </body>
+    <div class="authentication-container">
+      <% if Current.user %>
+      <h1>Profile</h1>
+      <% else %>
+      <h1>Authentication</h1>
+      <% end %>
+      <div class="authentication-wrapper">
+      <% if Current.user %>
+        <div class="profile">
+            <h2><%= Current.user.username %> </h2><br>
+        </div>
+        <div class="btn-wrapper">
+            <%= link_to 'Edit Password', edit_password_path %>
+            <%= button_to 'Logout', logout_path, method: :delete%>
+        </div>
+            <% else %>
+              <div class="btn-wrapper">
+            <%= link_to 'Sign Up', sign_up_path ,class: 'btn-signup'%>
+            <%= link_to 'Login', sign_in_path ,class: 'btn-login'%>
+              </div>
+          <% end %>
+      </div>
+    </div>
+  </html>

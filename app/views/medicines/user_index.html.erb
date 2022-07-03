@@ -1,9 +1,9 @@
 
-<html>
-    <head>
+  <html>
+      <head>
         <meta charset="utf-8">
         <title>Telemedicine</title>
-        <link rel="stylesheet" href="diagnoses.css">
+        <link rel="stylesheet" href="/stylesheet/article.css">
     </head>
     <body>
         <header>
@@ -19,15 +19,18 @@
                 </div>
             </ul>
         </header>
-        <div class="top-wrapper-diagnoses">
-            <div class="title">
-                <h3>Mental Health Test</h3>
-                <h4>Dalam 2 Minggu terakhir, bagaimana kondisi anda sesuai dengan pertanyaan di bawah</h4>
-            </div>
-        </div>
-        <div class="question-container">
-            <div>
-                <%= render "form", post: @diagnoses %>
+            <div class="medicine-wrapper">
+                <h2>Daftar Obat <span>Kesehatan Mental</span></h3>
+                <div class="medicine-card">
+                    <% @medicines.each do |medicine| %>
+                    <div class="mcard">
+                        <div class="mcard-img">
+                        </div>
+                        <h4><%= medicine.name %></h4>
+                        <h5><%= medicine.description %></h5>
+                    </div>
+                    <% end %>
+                </div>
             </div>
     </body>
-</html>
+  </html>
