@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Telemedicine</title>
-        <link rel="stylesheet" href="result.css">
+        <link rel="stylesheet" href="/stylesheet/result.css">
     </head>
     <body>
         <header>
@@ -20,33 +20,109 @@
             </ul>
         </header>
         <div class="result-container">
-            <h2>Kami telah menerima hasil test anda, berikut beberapa kegiatan yang dapat anda lakukan!</h2>
+            <h2 >Kami telah menerima hasil test anda, berikut beberapa kegiatan yang dapat anda lakukan!</h2>
             <div class="result-wrapper">
-                <%= @diagnoses %>
                 <% if @diagnoses >= 20 %>
                     <div class="result">
-                        <h4> Berceritalah dengan orang yang kamu percaya </h4>
-                        <h4> Selesaikan permasalahan satu per satu</h4>
-                        <h4> Percaya bahwa suatu masalah pasti ada jalan keluarnya</h4>
-                        <h4> Rajin berolahraga </h4>
-                        <h4> Jalankan hobi atau sesuatu yang membuatmu senang </h4>
-                        <h4> Hubungi tenaga professionall </h4>
+                        <h4> 1. Berceritalah dengan orang yang kamu percaya </h4>
+                        <p>Membagikan masalahmu kepada orang yang kamu percaya sangatlah meringankan beban yang ada di kepalamu. Oleh karena itu, carilah orang yang bisa kamu percaya</p>
+                        <h4> 2. Selesaikan permasalahan satu per satu</h4>
+                        <p>Take things one time at a time, menghadapi semua masalah secara bersamaan bukanlah cara yang efektif dan hanya akan menyusahkan kamu</p>
+                        <h4> 3. Percaya bahwa suatu masalah pasti ada jalan keluarnya</h4>
+                        <p>Tidak ada masalah yang tidak dapat diselesaikan, kamu harus percaya bahwa semua rintangan pasti akan kamu lalui</p>
+                        <h4> 4. Rajin berolahraga </h4>
+                        <p>Kesehatan fisik sama pentingnya dengan kesehatan mental, walaupun mental kita berantakan tapi kita tidak boleh mengabaikan kesehatan kita</p>
+                        <h4> 5. Jalankan hobi atau sesuatu yang membuatmu senang </h4>
+                        <p>Mengalihkan pikiran dengan kegiatan yang membuat senang seperti melakukan hobi merupakan pengalihan yang bagus</p>
+                        <h4> 6. Hubungi tenaga professionall </h4>
+                        <p>Jika anda tidak memiliki orang yang dapat dipercaya atau membutuhkan pertolongan secepatnya, segera hubungi psikolog terdekat atau bisa menggunakan fitur telemedicine kami</p>
                     </div> 
                 <% elsif @diagnoses >= 10 %>
-                        <h4> Sadari bahwa kecemasanmu adalah hal yang wajar </h4>
-                        <h4> Cari Pengalihan</h4>
-                        <h4> Temukan cara baru untuk berkomunikasi dengan teman-temanmu</h4>
-                        <h4> Fokuslah pada dirimu </h4>
-                        <h4> Selami perasaanmu </h4>
-                        <h4> Berbaik hatilah pada diri sendiri dan orang lain </h4>
+                    <div class="result">
+                        <h4> 1. Sadari bahwa kecemasanmu adalah hal yang wajar </h4>
+                        <p>Cemas atau khawatir merupakan hal yang wajar, tidak ada satu manusia di muka bumi yang tidak khawatir dengan apa yang akan terjadi di masa depan</p>
+                        <h4> 2. Cari Pengalihan</h4>
+                        <p>Fokus dengan masalahmu hanya akan menambah beban pikiranmu dan tidak semangat untuk menjalankan kegiatan sehari-hari. Ada baiknya untuk melakukan aktivitas lain yang bermanfaat</p>
+                        <h4> 3. Temukan cara baru untuk berkomunikasi dengan teman-temanmu</h4>
+                        <p>Bersosialisasi dengan orang lain juga merupakan salah satu cara untuk membuatmu lebih nyaman</p>
+                        <h4> 4. Fokuslah pada dirimu </h4>
+                        <p>You are important. Kita tidak perlu khawatir dengan orang lain terus menerus, terkadang diri sendirilah yang perlu kita khawatirkan</p>
+                        <h4> 5. Selami perasaanmu </h4>
+                        <p>Kita harus tau apa yang benar-benar kita rasakan agar bisa paham apa yang harus kita lakukan setelahnya</p>
+                        <h4> 6. Berbaik hatilah pada diri sendiri dan orang lain </h4>
+                        <p>Be kind to yourself, jangan menyalahkan diri sendiri terus menerus. Suatu hal terjadi karena itu memang takdirnya untuk terjadi dan tidak perlu menyalahkan siapa-siapa</p>
+                    </div>
                 <% elsif @diagnoses >= 0 %>
-                        <h4> Pertahankan kegiatanmu selama ini </h4>
-                        <h4> Jangan dekati hal-hal yang tidak kamu sukai</h4>
-                        <h4> Mempersibuk diri dengan kegiatan yang lebih bermanfaat</h4>
-                        <h4> Kamu bisa mulai menolong orang lain </h4>
-                        <h4> Jaga kesehatan fisik </h4>
+                    <div class="result">
+                        <h4> 1. Pertahankan kegiatanmu selama ini </h4>
+                        <p>You are doing great, we know that kesehatan mentalmu mulai membaik. Terus lakukan kegiatan yang bermanfaat dan tinggalkan yang tidak penting</p>
+                        <h4> 2. Jangan dekati hal-hal yang tidak kamu sukai</h4>
+                        <p>Menghindari hal yang kamu benci juga sangat penting, karena hal tersebut cenderung hanya akan merusak mood kamu</p>
+                        <h4> 3. Mempersibuk diri dengan kegiatan yang lebih bermanfaat</h4>
+                        <p>Ikut kegiatan volunteer, seminar atau mulai belajar skill baru. Kegiatan ini akan meningkatkan kepercayaan dirimu dan menjauhkanmu dari depresi</p>
+                        <h4> 4. Kamu bisa mulai menolong orang lain </h4>
+                        <p>By helping other, you help yourself. Menolong orang lain memiliki double manfaat, selain orang lain akan senang jika kita tolong, kita juga akan merasakan manfaat dari berbuat kebaikan</p>
+                        <h4> 5. Jaga kesehatan fisik </h4>
+                        <p>Selagi mempertahankan kesehatan mentalmu, tidak ada salahnya untuk meningkatkan kesehatan kita secara fisik</p>
+                    </div>
                 <% end %>
             </div>
         </div>
+        <div class="doctor-container">
+      <h2>Anda bisa mulai menghubungi dokter yang bekerja sama dengan kami dengan <span>Telemedicine</span>.</h2>
+      <div class="doctor-card">
+        <div class="dcard">
+          <div class="dcard-bottom">
+            <h3>Nama Dokter</h3>
+            <div class="dcard-container">
+            <h4>Tahun</h4>
+            <h4>Rating</h4>
+            </div>
+            <a class="button-chat" href="#chat">Chat</a>
+          </div>
+        </div>
+        <div class="dcard">
+          <div class="dcard-bottom">
+            <h3>Nama Dokter</h3>
+            <div class="dcard-container">
+            <h4>Tahun</h4>
+            <h4>Rating</h4>
+            </div>
+            <a class="button-chat" href="#chat">Chat</a>
+          </div>
+        </div>
+        <div class="dcard">
+          <div class="dcard-bottom">
+            <h3>Nama Dokter</h3>
+            <div class="dcard-container">
+            <h4>Tahun</h4>
+            <h4>Rating</h4>
+            </div>
+            <a class="button-chat" href="#chat">Chat</a>
+          </div>
+        </div>
+          <div class="dcard">
+            <div class="dcard-bottom">
+              <h3>Nama Dokter</h3>
+              <div class="dcard-container">
+              <h4>Tahun</h4>
+              <h4>Rating</h4>
+              </div>
+              <a class="button-chat" href="#chat">Chat</a>
+            </div>
+          </div>
+        <div class="dcard">
+          <div class="dcard-bottom">
+            <h3>Nama Dokter</h3>
+            <div class="dcard-container">
+            <h4>Tahun</h4>
+            <h4>Rating</h4>
+            </div>
+            <a class="button-chat" href="#chat">Chat</a>
+          </div>
+        </div>
+      </div>
+      <a class="button-telemedicine" href="#telemedicine">Lebih lanjut</a>
+    </div>
     </body>
 </html>

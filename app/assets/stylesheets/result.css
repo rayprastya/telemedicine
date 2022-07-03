@@ -3,7 +3,41 @@ body{
     margin-bottom:200px;
 }
 
-.result-container h2{
- font-size:32px;
- color: #0080FF;   
+.result-container{
+    padding-left:200px;
+    padding-top:100px;
 }
+
+.result-container h2{
+    font-size:32px;
+    color: #0080FF;
+}
+
+.result-wrapper{
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 33px;
+    padding-left:40px;
+    padding-top:10px;
+}
+
+.result p{
+    width:50%;
+    font-size:24px;
+}
+
+.doctor-container{
+    padding-top:100px;
+}
+
+.doctor-container h2{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+    margin-left:200px;
+}
+
+.doctor-container span{
+    color: #0080FF;
+}
+
