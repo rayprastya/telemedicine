@@ -14,6 +14,15 @@ class DoctorsTest < ApplicationSystemTestCase
     visit doctors_url
     click_on "New doctor"
 
+<<<<<<< HEAD
+=======
+    fill_in "Account", with: @doctor.account_id
+    fill_in "Email", with: @doctor.email
+    fill_in "Experience", with: @doctor.experience
+    fill_in "Gender", with: @doctor.gender
+    fill_in "Name", with: @doctor.name
+    fill_in "No hp", with: @doctor.no_hp
+>>>>>>> 5703ed2535fb91942061211ee2017f110c74b409
     click_on "Create Doctor"
 
     assert_text "Doctor was successfully created"
@@ -24,6 +33,15 @@ class DoctorsTest < ApplicationSystemTestCase
     visit doctor_url(@doctor)
     click_on "Edit this doctor", match: :first
 
+<<<<<<< HEAD
+=======
+    fill_in "Account", with: @doctor.account_id
+    fill_in "Email", with: @doctor.email
+    fill_in "Experience", with: @doctor.experience
+    fill_in "Gender", with: @doctor.gender
+    fill_in "Name", with: @doctor.name
+    fill_in "No hp", with: @doctor.no_hp
+>>>>>>> 5703ed2535fb91942061211ee2017f110c74b409
     click_on "Update Doctor"
 
     assert_text "Doctor was successfully updated"
