@@ -23,8 +23,12 @@
               <li><a class="btnnav-contact" href="#contact">Kontak</a></li>
             </div>
             <div class="header-right">
-              <li><a class="login" href="/login">Login</a></li>
+              <% if Current.user%>
+                <li><p> <a href="/login">Hello <%= Current.user.username %>!</p></a></li>
             </div>
+              <% else %>
+              <li><a class="login" href="/login">Login</a></li>
+              <% end %>
           </ul>
       </div>
     </header>
