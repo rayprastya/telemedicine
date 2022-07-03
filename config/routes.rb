@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  resources :telemedicines
-  resources :doctors
-=======
+
   resources :doctors
   resources :accounts
->>>>>>> 5703ed2535fb91942061211ee2017f110c74b409
   resources :articles
 
   get 'admin_page/index'
@@ -53,8 +49,5 @@ Rails.application.routes.draw do
   get "/medicine",
     to: "medicines#user_index",
     as: "user_index_medicine"
-
-
-
 
 end
