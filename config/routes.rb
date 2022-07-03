@@ -37,7 +37,7 @@ Rails.application.routes.draw do
     to: "diagnoses#index",
     as: "Diagnoses_index"
 
-  get "/diagnoses/result",
-    to: "diagnoses_result#index",
-    as: "DiagnosesResult_index"
+  post "/diagnoses/index",
+    to: "diagnoses#result",
+    as: "diagnoses_result"
 end
