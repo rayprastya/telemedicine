@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :doctors
+  resources :accounts
   resources :articles
 
   get 'admin_page/index'

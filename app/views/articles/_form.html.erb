@@ -13,20 +13,20 @@
 
   <div>
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title ,style: "width:50%;" %>
   </div>
 
   <div>
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description,style: "width:50%; height:100px;"  %>
   </div>
 
   <div>
     <%= form.label :author, style: "display: block" %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author,style: "width:50%;"  %>
   </div>
-
+<br>
   <div>
-    <%= form.submit %>
+    <%= form.submit :Submit, class:"btn btn-primary",style: " margin-top:10px;" %>
   </div>
 <% end %>

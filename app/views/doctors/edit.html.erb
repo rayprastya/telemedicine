@@ -1,0 +1,9 @@
+<%= render 'admin_page/header' %> 
+<div class="container" >
+  <h1>Editing doctor</h1>
+  
+  <%= render "form", doctor: @doctor %>
+  <div>
+     <%= link_to "< Back", doctors_path,class:"btn btn-outline-secondary" %>
+  </div>
+</div>

@@ -1,10 +1,16 @@
-<h1>Editing medicine</h1>
-
-<%= render "form", medicine: @medicine %>
+    <%= render 'admin_page/header' %> 
 
 <br>
+<div class="container">
+ 
 
-<div>
-  <%= link_to "Show this medicine", @medicine %> |
-  <%= link_to "Back to medicines", medicines_path %>
+  <h1>Editing medicine</h1>
+  
+  <%= render "form", medicine: @medicine %>
+  
+  <br>
+  
+  <div>
+     <%= link_to "< Back", medicines_path,class:"btn btn-outline-secondary" %>
+  </div>
 </div>
