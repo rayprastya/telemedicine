@@ -4,5 +4,4 @@ class User < ApplicationRecord
   # validates email
   validates :username, presence: true, uniqueness: true
   # validates :username, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: 'Invalid username' }
-  has_one :doctor
 end
