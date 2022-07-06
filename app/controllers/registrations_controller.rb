@@ -2,21 +2,21 @@ class RegistrationsController < ApplicationController
     # instantiates new user
     protect_from_forgery with: :null_session
     def new
-      @user = User.new
+      @user = Account.new
     end
     def create
-      @user = User.new(user_params)
-      if @user.save
+      @account = Account.new(account_params)
+      if @account.save
       # stores saved user id in a session
-        session[:user_id] = @user.id
+        session[:account_id] = @account.id
         redirect_to log_in_path, notice: 'Successfully created account'
       else
         render :new
       end
     end
     private
-    def user_params
+    def account_params
       # strong parameters
-      params.require(:user).permit(:username, :password, :password_confirmation)
+      params.require(:account).permit(:username, :password)
     end
   end
