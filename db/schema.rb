@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_03_142850) do
+ActiveRecord::Schema.define(version: 2022_07_03_141557) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "username"
@@ -52,6 +52,23 @@ ActiveRecord::Schema.define(version: 2022_07_03_142850) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "room_id", null: false
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["room_id"], name: "index_messages_on_room_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
+    t.boolean "is_private", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "telemedicines", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -70,4 +87,6 @@ ActiveRecord::Schema.define(version: 2022_07_03_142850) do
   end
 
   add_foreign_key "doctors", "accounts"
+  add_foreign_key "messages", "rooms"
+  add_foreign_key "messages", "users"
 end
