@@ -37,25 +37,20 @@
   </div>
 
   <div>
-    <%= form.label :account_id, style: "display: block" %>
-    <%= form.text_field :account_id %>
-  </div>
-
-  <div>
     <%= form.label :username, style: "display: block" %>
     <%= form.text_field :username %>
   </div>
 
   <div>
     <%= form.label :password, style: "display: block" %>
-    <%= form.text_field :password %>
+    <%= form.password_field :password %>
   </div>
 
   <div>
     <%= form.label :role, style: "display: block" %>
-    <%= form.text_field :role %>
+    <%= form.text_field :role, disabled: true, value: "DOCTOR"  %>
   </div>
-
+  <br>
   <div>
     <%= form.submit %>
   </div>

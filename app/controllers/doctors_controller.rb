@@ -22,10 +22,11 @@ class DoctorsController < ApplicationController
 
   # POST /doctors or /doctors.json
   def create
-    @doctor = Doctor.new(doctor_params)
-    @account = Account.new(user_params.except(:name, :email, :no_hp, :gender, :experience))
+    @account = Account.new(account_params.except(:name, :email, :no_hp, :gender, :experience))
+    @doctor = Doctor.new
+    @account.role = "DOCTOR"
     
-      if @doctor.save
+      if @account.save
         @doctor.account = @account
         @doctor.name = account_params[:name]
         @doctor.email = account_params[:email]
@@ -71,9 +72,9 @@ class DoctorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def doctor_params
-      params.require(:doctor).permit(:name, :email, :no_hp, :gender, :experience, :account_id)
+      params.require(:doctor).permit(:name, :email, :no_hp, :gender, :experience, :account_id, :username, :password, :role)
     end
     def account_params
-      params.require(:account).permit(:username, :password, :role)
+      params.require(:account).permit(:name, :email, :no_hp, :gender, :experience, :account_id, :username, :password, :role)
     end
 end
