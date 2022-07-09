@@ -23,7 +23,7 @@ class DoctorsController < ApplicationController
   # POST /doctors or /doctors.json
   def create
     @doctor = Doctor.new(doctor_params)
-    @account = Account.new(user_params.except(:name, :email, :no_hp, :gender, :experience))
+    @account = Account.new(account_params.except(:name, :email, :no_hp, :gender, :experience))
     
       if @doctor.save
         @doctor.account = @account

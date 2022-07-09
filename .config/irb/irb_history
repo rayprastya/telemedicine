@@ -36,3 +36,5 @@ quit
 User.last
 Account.all
 Account
+User.all
+User
