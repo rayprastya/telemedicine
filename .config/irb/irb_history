@@ -38,3 +38,11 @@ Account.all
 Account
 User.all
 User
+Doctor.all
+Doctor.all
+Account
+Account.all
+Account.all
+Article.all
+Article
+exit

@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 2022_07_06_002713) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "author"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "diagnoses", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -35,6 +43,13 @@ ActiveRecord::Schema.define(version: 2022_07_06_002713) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["account_id"], name: "index_doctors_on_account_id"
+  end
+
+  create_table "medicines", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "messages", force: :cascade do |t|

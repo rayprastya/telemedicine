@@ -1,5 +1,6 @@
  class SessionsController < ApplicationController
-    def new; end
+    def new
+    end
     def create
       account = Account.find_by(username: params[:username])
       # finds existing user, checks to see if user can be authenticated
