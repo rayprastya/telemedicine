@@ -22,11 +22,11 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(user_params)
+    @user = User.new
 
     @account = Account.new(account_params.except(:name, :email, :no_hp, :gender))
     
-      if @user.save
+      if @account.save
         @user.account = @account
         @user.name = account_params[:name]
         @user.email = account_params[:email]

@@ -1,3 +1,4 @@
+<%= render 'admin_page/header' %> 
 <h1>New account</h1>
 
 <%= render "form", account: @account %>
@@ -5,5 +6,5 @@
 <br>
 
 <div>
-  <%= link_to "Back to accounts", accounts_path %>
+  <%= link_to "< Back", accounts_path,class:"btn btn-outline-secondary" %>
 </div>
