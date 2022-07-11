@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_06_002713) do
+ActiveRecord::Schema.define(version: 2022_07_11_103016) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "username"
     t.string "password"
-    t.string "password_digest"
     t.string "role"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -23,8 +22,8 @@ ActiveRecord::Schema.define(version: 2022_07_06_002713) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
-    t.string "description"
-    t.string "author"
+    t.text "description"
+    t.text "author"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -48,9 +47,16 @@ ActiveRecord::Schema.define(version: 2022_07_06_002713) do
 
   create_table "medicines", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "meetings", force: :cascade do |t|
+    t.date "tanggal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "zoom_link"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -68,6 +74,7 @@ ActiveRecord::Schema.define(version: 2022_07_06_002713) do
     t.boolean "is_private", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "zoom_link"
   end
 
   create_table "telemedicines", force: :cascade do |t|

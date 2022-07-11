@@ -46,3 +46,5 @@ Account.all
 Article.all
 Article
 exit
+z = Zoom.new
+z.user_list
