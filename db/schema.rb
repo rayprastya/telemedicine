@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_11_103016) do
+ActiveRecord::Schema.define(version: 2022_07_11_202939) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "username"
@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(version: 2022_07_11_103016) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "zoom_link"
+    t.integer "account_id"
+    t.integer "doctor"
+    t.index ["account_id"], name: "index_meetings_on_account_id"
   end
 
   create_table "messages", force: :cascade do |t|

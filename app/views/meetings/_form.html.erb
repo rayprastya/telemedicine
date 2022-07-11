@@ -17,6 +17,14 @@
   </div>
 
   <div>
+    <%= form.label :dokter, style: "display: block" %>
+    <%= form.text_field :doctor%>
+  </div>
+  <div>
+    <%= form.hidden_field :account_id, value: Current.account.id %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

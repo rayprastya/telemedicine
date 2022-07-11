@@ -9,6 +9,9 @@
               <li><a class="btnnav-contact" href="/doctors">Dokter</a></li>
               <li><a class="btnnav-contact" href="/users">User</a></li>
               <li><a class="btnnav-contact" href="/accounts">Akun</a></li>
+              <% if Current.account%>
+                  <li><a class="btnnav-contact" href="/meetings">Konsultasi</a></li>
+              <% end %>
             </div>
             <div class="header-right">
               <% if Current.account%>

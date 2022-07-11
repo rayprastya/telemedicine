@@ -80,3 +80,7 @@ user = Account.find_by(username: 'rayhanp')
 user.role = "admin"
 user.save
 quit
+Meetings.last
+Meeting.last
+Meeting.last
+quit

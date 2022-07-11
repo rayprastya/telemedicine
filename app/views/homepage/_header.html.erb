@@ -6,6 +6,9 @@
               <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
               <li><a class="btnnav-article" href="/article">Artikel</a></li>
               <li><a class="btnnav-contact" href="/medicine">Obat</a></li>
+              <% if Current.account%>
+                  <li><a class="btnnav-contact" href="/meetings">Konsultasi</a></li>
+              <% end %>
             </div>
             <div class="header-right">
               <% if Current.account%>
