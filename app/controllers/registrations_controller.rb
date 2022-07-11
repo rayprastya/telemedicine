@@ -3,6 +3,7 @@ class RegistrationsController < ApplicationController
     protect_from_forgery with: :null_session
     def new
       @user = Account.new
+      @account = Account.new
     end
     def create
       @account = Account.new(account_params)

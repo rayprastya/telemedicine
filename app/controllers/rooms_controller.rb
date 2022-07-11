@@ -3,7 +3,7 @@ class RoomsController < ApplicationController
   @message = Message.new
   # GET /rooms or /rooms.json
   def index
-    @current_user = Current.user
+    @current_user = Current.account
     redirect_to log_in unless @current_user
     @rooms = Room.all
     @users = User.all_except(@current_user)
