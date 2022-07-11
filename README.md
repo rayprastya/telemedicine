@@ -1,25 +1,56 @@
-# Rails on Replit
+## Healthy
 
-This is a template to get you started with Rails on Replit. It's ready to go so you can just hit run and start coding!
+Healthy is a telemedicine app that provide user to arrange an virtual meet with the health consultant ( doctor ) to help them handle their mental health issue, the app also provide some information about medicine and some article regarding mental health issue to add more knowledge regarding mental health.
 
-This template was generated using `rails new` (after you install the `rails` gem from the packager sidebar) so you can always do that if you prefer to set it up from scratch. The only had two make config changes we had to make to run it on Replit:
+## requirement
 
-- bind the app on `0.0.0.0` instead of `localhost` (see `.replit`)
-- allow `*.repl.co` hosts (see `config/environments/development.rb`)
-- allow the app to be iframed on `replit.com` (see `config/application.rb`)
+some reqiurements you need to use this app is:
+[Ruby] (https://www.ruby-lang.org/id/)
+Rails
+[SQLITE] (https://www.sqlite.org/)
 
-## Running the app
+to use rails you need to download ruby first, and run this command
 
-Simple hit run! You can edit the run command from the `.replit` file.
+```bash
+gem install rails
+```
+and also you might need to clone this repo first by hitting this command
 
-## Running commands
 
-Start every command with `bundle exec` so that it runs in the context of the installed gems environment. The console pane will give you output from the server but you can run arbitrary command from the shell without stopping the server.
+```bash
+git clone https://github.com/rayprastya/telemedicine.git
+```
 
-## Database
+## Getting started
+you  have to run the migration first to collect all the model setup for the app
 
-SQLite would work in development but we don't recommend running it in production. Instead look into using the built-in [Replit database](http://docs.replit.com/misc/database). Otherwise you are welcome to connect databases from your favorite provider. 
+```bash
+rails db:migrate
+# or if you're using rake
+rake db:migrate
+```
 
-## Help
+and you can start the app by hitting this command
 
-If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
+```bash
+rails s
+```
+by that the app is ready to use
+
+## Feature
+
+All the feature installed in these app so far are:
+Account ( CRUD , used as the main model for authentication )
+User ( CRUD, used as extension table that associate from Account model for user)
+Doctor ( CRUD, used as extension table that associate from Account model for doctor)
+Article ( CRUD, provide information regarding mental health issue)
+Medicine ( CRUD, provide information regarding medicine that used to handle mental health issue)
+Meetings ( CRUD, provide meeting link (ZOOM) for user and doctor to have some consulting session)
+
+for the detailed routes you can simply run this command
+```bash
+rails routes
+```
+it will be easier to understand since rails also provide HTTP method into each routes.
+
+CREATED BY BE_HE3
