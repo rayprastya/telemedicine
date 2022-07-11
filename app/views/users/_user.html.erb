@@ -20,8 +20,18 @@
   </p>
 
   <p>
-    <strong>Account:</strong>
-    <%= user.account_id %>
+    <strong>Username:</strong>
+    <%= user.account.username %>
+  </p>
+
+  <p>
+    <strong>Password:</strong>
+    <%= user.account.password %>
+  </p>
+
+  <p>
+    <strong>Role:</strong>
+    <%= user.account.role %>
   </p>
 
 </div>

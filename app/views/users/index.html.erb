@@ -1,14 +1,31 @@
+    <%= render 'admin_page/header' %> 
+
 <p style="color: green"><%= notice %></p>
-
-<h1>Users</h1>
-
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New user", new_user_path %>
+<h1 class="title">List users</h1>
+<%= link_to "New user", new_user_path,class:"btn btn-success",style:"margin-bottom:10px; margin-left:100px; " %>
+<table class="table table-bordered" style="width:55%; margin-left:100px;" >
+  <thead class="table-info" >
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">No HP</th>
+      <th scope="col">Gender</th>
+      <th scope="col" colspan="3">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.no_hp %></td>
+      <td><%= user.gender %></td>
+      <td><div class="btn-group">
+              <%= link_to "Edit", edit_user_path(user),class:"btn btn-outline-warning" %>
+              <%= link_to 'Show', user,class:"btn btn-outline-info" %></div></td>
+          <td><%= button_to "Delete", user, method: :delete,data: { confirm: 'Are you sure?' },class:"btn btn-outline-danger" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+  
