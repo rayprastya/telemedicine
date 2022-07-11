@@ -43,14 +43,14 @@
 
   <div>
     <%= form.label :password, style: "display: block" %>
-    <%= form.text_field :password %>
+    <%= form.password_field :password %>
   </div>
 
   <div>
     <%= form.label :role, style: "display: block" %>
-    <%= form.text_field :role, value: "doctor" %>
+    <%= form.text_field :role, disabled: true, value: "DOCTOR"  %>
   </div>
-
+  <br>
   <div>
     <%= form.submit %>
   </div>

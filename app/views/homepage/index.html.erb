@@ -24,6 +24,7 @@
             </div>
             <div class="header-right">
               <% if Current.account%>
+
                 <li><p> <a href="/login">Hello <%= Current.account.username %> !</p></a></li>
               <% else %>
               <li><a class="login" href="/login">Login</a></li>
