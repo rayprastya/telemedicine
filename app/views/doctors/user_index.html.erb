@@ -1,0 +1,20 @@
+       <div id="articles-container">
+            <div class="article-wrapper">
+                <h2>Daftar <span>Dokter</span></h3>
+                <div class="doctor-card">
+                  <% @doctors = Doctor.all %>
+                  <% @doctors.each do |doctor| %>
+                  <div class="dcard">
+                    <div class="dcard-bottom">
+                      <h3><%= doctor.name %></h3>
+                      <div class="dcard-container">
+                      <h4>Pengalaman <%= doctor.experience %> Tahun </h4>
+          <!--             <h4>Rating</h4> -->
+                      </div>
+                      <a class="button-chat" href="doctors/<%= doctor.id %>">Detail</a>
+                    </div>
+                  </div>
+                  <% end %>
+                </div>
+            </div>
+        </div>
