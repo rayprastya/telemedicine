@@ -3,12 +3,24 @@
 <h1>Meetings</h1>
 
 <div id="meetings">
-  <% @meetings.each do |meeting| %>
-    <%= render meeting %>
-    <p>
-      <%= link_to "Show this meeting", meeting %>
-    </p>
+  <% if Current.account.role == "DOKTER" %>
+    <% @meet = Meeting.find(:all, :conditions => "doctor = Current.account.id") %>
+  <% elsif Current.account.role == "user" %>
+    <% @meet = Meeting.where(:account_id => Current.account.id) %>
+  <% elsif Current.account.role == "admin" %>
+    <% @meet = Meeting.all %>
   <% end %>
+
+  <% if @meet %>
+    <% @meet.each do |meeting| %>
+      <%= render meeting %>
+      <p>
+        <%= link_to "Show this meeting", meeting %>
+      </p>
+    <% end %>
+  <% else %>
+    <h3> No meeting yet </h3>
+  <%end%>
 </div>
 
 <%= link_to "New meeting", new_meeting_path %>

@@ -48,3 +48,39 @@ Article
 exit
 z = Zoom.new
 z.user_list
+Account.last
+user = User.find_by(name: 'rayhanp')
+user.update(role: "admin")
+user.role = "admin"
+user.role = "admin"
+ray = User.find_by(name: 'rayhanp')
+ray.role = "admin"
+clear
+cls
+cws
+ray = User.find_by(name: 'rayhanp')
+
+users.last
+user.last
+User.last
+Account.last
+ray = Account.find_by(name: 'rayhanp')
+ray.role = "admin"
+ray = Account.find_by(name: 'rayhanp')
+Account.last
+ray = Account.find_by(username: 'rayhanp')
+ray.role = "admin"
+ray.save
+Account.last
+ray.save
+ray.role = "admin"
+ray.save
+Account.last
+user = Account.find_by(username: 'rayhanp')
+user.role = "admin"
+user.save
+quit
+Meetings.last
+Meeting.last
+Meeting.last
+quit

@@ -1,38 +1,20 @@
-  <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Telemedicine</title>
-        <link rel="stylesheet" href="/stylesheet/article.css">
-    </head>
-    <body>
-        <header>
-            <ul>
-                <div class="header-left">
-                <li><a class="btnnav-home" href="/">Home</a></li>
-                <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
-                <li><a class="btnnav-article" href="/article">Artikel</a></li>
-                <li><a class="btnnav-contact" href="/contact">Kontak</a></li>
-                </div>
-                <div class="header-right">
-                <li><a class="login" href="/login">Login</a></li>
-                </div>
-            </ul>
-        </header>
-            <div class="doctor-wrapper">
-              <h2>Mulai chat dengan <span>dokter</span> sekarang</h3>
-              <div class="doctor-card">
-                <div class="dcard">
-                  <div class="dcard-bottom">
+       <div id="articles-container">
+            <div class="article-wrapper">
+                <h2>Daftar <span>Dokter</span></h3>
+                <div class="doctor-card">
+                  <% @doctors = Doctor.all %>
                   <% @doctors.each do |doctor| %>
-                    <h3><%= doctor.name %></h3>
-                    <div class="dcard-container">
-                    <h4><%= doctor.experience %></h4>
+                  <div class="dcard">
+                    <div class="dcard-bottom">
+                      <h3><%= doctor.name %></h3>
+                      <div class="dcard-container">
+                      <h4>Pengalaman <%= doctor.experience %> Tahun </h4>
+          <!--             <h4>Rating</h4> -->
+                      </div>
+                      <a class="button-chat" href="doctors/<%= doctor.id %>">Detail</a>
                     </div>
-                    <a class="button-chat" href="#chat">Chat</a>
-                  <% end %>
                   </div>
+                  <% end %>
                 </div>
-              </div>
             </div>
-    </body>
-  </html>
+        </div>

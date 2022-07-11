@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Telemedicine</title>
-    <link rel="stylesheet" href="homepage.css">
-
-    <script type="text/javascript">
-      function zoom() {
-        document.body.style.zoom = "80%"
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-          <ul>
-            <div class="header-left">
-              <li><a class="home" href="/">Home</a></li>
-              <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
-              <li><a class="btnnav-article" href="/article">Artikel</a></li>
-              <li><a class="btnnav-contact" href="/contact">Kontak</a></li>
-            </div>
-            <div class="header-right">
-              <% if Current.account%>
-
-                <li><p> <a href="/login">Hello <%= Current.account.username %> !</p></a></li>
-              <% else %>
-              <li><a class="login" href="/login">Login</a></li>
-              <% end %>
-            </div>
-          </ul>
-      </div>
-    </header>
-    <div class="top-wrapper">
+   <div class="top-wrapper">
       <div class="top-left">
         <div class="left-welcome">
           <h3>Selamat datang di <span>Telemedicine</span></h3>
@@ -71,114 +36,51 @@
     <div class="doctor-wrapper">
       <h2>Mulai chat dengan <span>dokter</span> sekarang</h3>
       <div class="doctor-card">
+        <% @doctors = Doctor.all %>
+        <% @doctors.each do |doctor| %>
         <div class="dcard">
           <div class="dcard-bottom">
-            <h3>Nama Dokter</h3>
+            <h3><%= doctor.name %></h3>
             <div class="dcard-container">
-            <h4>Tahun</h4>
-            <h4>Rating</h4>
+            <h4>Pengalaman <%= doctor.experience %> Tahun </h4>
+<!--             <h4>Rating</h4> -->
             </div>
-            <a class="button-chat" href="#chat">Chat</a>
+            <a class="button-chat" href="doctor/<%= doctor.id %>">Detail</a>
           </div>
         </div>
-        <div class="dcard">
-          <div class="dcard-bottom">
-            <h3>Nama Dokter</h3>
-            <div class="dcard-container">
-            <h4>Tahun</h4>
-            <h4>Rating</h4>
-            </div>
-            <a class="button-chat" href="#chat">Chat</a>
-          </div>
-        </div>
-        <div class="dcard">
-          <div class="dcard-bottom">
-            <h3>Nama Dokter</h3>
-            <div class="dcard-container">
-            <h4>Tahun</h4>
-            <h4>Rating</h4>
-            </div>
-            <a class="button-chat" href="#chat">Chat</a>
-          </div>
-        </div>
-          <div class="dcard">
-            <div class="dcard-bottom">
-              <h3>Nama Dokter</h3>
-              <div class="dcard-container">
-              <h4>Tahun</h4>
-              <h4>Rating</h4>
-              </div>
-              <a class="button-chat" href="#chat">Chat</a>
-            </div>
-          </div>
-        <div class="dcard">
-          <div class="dcard-bottom">
-            <h3>Nama Dokter</h3>
-            <div class="dcard-container">
-            <h4>Tahun</h4>
-            <h4>Rating</h4>
-            </div>
-            <a class="button-chat" href="#chat">Chat</a>
-          </div>
-        </div>
+        <% end %>
       </div>
-      <a class="button-telemedicine" href="/telemedicine">Lebih lanjut</a>
+      <a class="button-telemedicine" href="/doctor">Lebih lanjut</a>
     </div>
     <div class="article-wrapper">
       <h2>Baca artikel <span>Kesehatan Mental</span></h3>
         <div class="article-card">
+        <% @articles = Article.all %>
+        <% @articles.each do |article| %>
           <div class="acard">
             <div class="acard-bottom">
-              <h3>Judul Artikel</h3>
+              <h3><%= article.title %></h3>
               <h4>Kesehatan Mental</h4>
-              <a class="button-read" href="#chat">Baca</a>
+              <h5><%= article.description %></h5>
+              <a class="button-read" href="articles/<%= article.id %>">Baca</a>
             </div>
           </div>
-          <div class="acard">
-            <div class="acard-bottom">
-              <h3>Judul Artikel</h3>
-              <h4>Kesehatan Mental</h4>
-              <a class="button-read" href="#chat">Baca</a>
-            </div>
-          </div>
+          <% end %>
         </div>
         <a class="button-article" href="/article">Lebih lanjut</a>
     </div>
     <div class="medicine-wrapper">
       <h2>Informasi <span>Obat</span> dan <span>Vitamin</span></h3>
       <div class="medicine-card">
+        <% @medicines = Medicine.all %>
+        <% @medicines.each do |medicine| %>
         <div class="mcard">
           <div class="mcard-img">
           </div>
-          <h4>Nama Obat</h4>
+          <h4><%= medicine.name %></h4>
+          <h5><%= medicine.description %></h5>
         </div>
-        <div class="mcard">
-          <div class="mcard-img">
-          </div>
-          <h4>Nama Obat</h4>
-        </div>
-        <div class="mcard">
-          <div class="mcard-img">
-          </div>
-          <h4>Nama Obat</h4>
-        </div>
-        <div class="mcard">
-          <div class="mcard-img">
-          </div>
-          <h4>Nama Obat</h4>
-        </div>
-        <div class="mcard">
-          <div class="mcard-img">
-          </div>
-          <h4>Nama Obat</h4>
-        </div>
-        <div class="mcard">
-          <div class="mcard-img">
-          </div>
-          <h4>Nama Obat</h4>
-        </div>
+        <% end %>
       </div>
       <a class="button-medicine" href="/medicine">Lebih lanjut</a>
     </div>
-  </body>
-</html>
