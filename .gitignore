@@ -4,6 +4,16 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore replit cache
+/.cache/replit/nix
+
+# Ignore irb config
+/.config/irb
+
+# Ignore replit
+/replit
+/replit.nix
+
 # Ignore bundler config.
 /.bundle
 
