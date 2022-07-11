@@ -36,7 +36,7 @@
     <div class="doctor-wrapper">
       <h2>Mulai chat dengan <span>dokter</span> sekarang</h3>
       <div class="doctor-card">
-        <% @doctors = Doctor.all %>
+        <% @doctors = Doctor.limit(3) %>
         <% @doctors.each do |doctor| %>
         <div class="dcard">
           <div class="dcard-bottom">
@@ -55,7 +55,7 @@
     <div class="article-wrapper">
       <h2>Baca artikel <span>Kesehatan Mental</span></h3>
         <div class="article-card">
-        <% @articles = Article.all %>
+        <% @articles = Article.limit(3) %>
         <% @articles.each do |article| %>
           <div class="acard">
             <div class="acard-bottom">
@@ -72,7 +72,7 @@
     <div class="medicine-wrapper">
       <h2>Informasi <span>Obat</span> dan <span>Vitamin</span></h3>
       <div class="medicine-card">
-        <% @medicines = Medicine.all %>
+        <% @medicines = Medicine.limit(3) %>
         <% @medicines.each do |medicine| %>
         <div class="mcard">
           <div class="mcard-img">
