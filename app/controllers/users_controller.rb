@@ -12,7 +12,8 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    @user = Account.new
+    @account = Account.new
   end
 
   # GET /users/1/edit
@@ -21,17 +22,22 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(user_params)
+    @user = User.new
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to user_url(@user), notice: "User was successfully created." }
-        format.json { render :show, status: :created, location: @user }
+    @account = Account.new(account_params.except(:name, :email, :no_hp, :gender))
+    
+      if @account.save
+        @user.account = @account
+        @user.name = account_params[:name]
+        @user.email = account_params[:email]
+        @user.no_hp = account_params[:no_hp]
+        @user.gender = account_params[:gender]
+        @user.save
+        session[:account_id] = @account.id
+        redirect_to users_path, notice: 'Successfully created account'
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
   end
 
   # PATCH/PUT /users/1 or /users/1.json
@@ -66,5 +72,8 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:name, :email, :no_hp, :gender, :account_id)
+    end
+    def account_params
+      params.require(:account).permit(:username, :password, :role,:name, :email, :no_hp, :gender)
     end
 end

@@ -23,7 +23,23 @@
     <div class="signup-container">
       <h1>Register</h1>
       <div class="signup-wrapper">
-      <%= form_with model: @account, url: sign_up_path do |f| %>
+      <%= form_with model: @user, url: sign_up_path do |f| %>
+        <p>
+        <%= f.label 'name' %><br>
+        <%= f.text_field :name , class: 'f-signup' %>
+        </p>
+        <p>
+        <%= f.label 'no_hp' %><br>
+        <%= f.text_field :no_hp , class: 'f-signup' %>
+        </p>
+        <p>
+        <%= f.label 'email' %><br>
+        <%= f.text_field :email , class: 'f-signup' %>
+        </p>
+        <p>
+        <%= f.label 'gender' %><br>
+        <%= f.text_field :gender , class: 'f-signup' %>
+        </p>
         <p>
         <%= f.label 'username' %><br>
         <%= f.text_field :username , class: 'f-signup' %>
@@ -32,6 +48,10 @@
         <%= f.label 'password' %><br>
         <%= f.password_field :password , class: 'f-signup' %>
         </p>
+        <p>
+        <%= f.hidden_field :role , class: 'f-signup', value:"user" %>
+        </p>
+  
         <p>
         <%= f.submit 'Sign Up', class: 'btn-signup' %>
         </p>

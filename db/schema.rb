@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2022_07_06_002713) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
-    t.text "description"
-    t.text "author"
+    t.string "description"
+    t.string "author"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2022_07_06_002713) do
 
   create_table "medicines", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

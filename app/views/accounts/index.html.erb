@@ -1,14 +1,29 @@
+    <%= render 'admin_page/header' %> 
+
 <p style="color: green"><%= notice %></p>
-
-<h1>Accounts</h1>
-
-<div id="accounts">
-  <% @accounts.each do |account| %>
-    <%= render account %>
-    <p>
-      <%= link_to "Show this account", account %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New account", new_account_path %>
+<h1 class="title">List Accounts</h1>
+<%= link_to "New Account", new_account_path,class:"btn btn-success",style:"margin-bottom:10px; margin-left:100px; " %>
+<table class="table table-bordered" style="width:55%; margin-left:100px;" >
+  <thead class="table-info" >
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Password</th>
+      <th scope="col">Role</th>
+      <th scope="col" colspan="3">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @accounts.each do |account| %>
+    <tr>
+      <td><%= account.username %></td>
+      <td><%= account.password %></td>
+      <td><%= account.role %></td>
+      <td><div class="btn-group">
+              <%= link_to "Edit", edit_account_path(account),class:"btn btn-outline-warning" %>
+              <%= link_to 'Show', account,class:"btn btn-outline-info" %></div></td>
+          <td><%= button_to "Delete", account, method: :delete,data: { confirm: 'Are you sure?' },class:"btn btn-outline-danger" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+  
