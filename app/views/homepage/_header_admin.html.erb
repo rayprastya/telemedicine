@@ -1,0 +1,23 @@
+<header>
+      <div class="container">
+          <ul>
+            <div class="header-left">
+              <li><a class="home" href="/">Home</a></li>
+              <li><a class="btnnav-telemedicine" href="/telemedicines">Telemedicine</a></li>
+              <li><a class="btnnav-article" href="/articles">Artikel</a></li>
+              <li><a class="btnnav-contact" href="/medicines">Obat</a></li>
+              <li><a class="btnnav-contact" href="/doctors">Dokter</a></li>
+              <li><a class="btnnav-contact" href="/users">User</a></li>
+              <li><a class="btnnav-contact" href="/accounts">Akun</a></li>
+            </div>
+            <div class="header-right">
+              <% if Current.account%>
+
+                <li><p> <a href="/login">Hello <%= Current.account.username %> | Admin !</p></a></li>
+              <% else %>
+              <li><a class="login" href="/login">Login</a></li>
+              <% end %>
+            </div>
+          </ul>
+      </div>
+    </header>

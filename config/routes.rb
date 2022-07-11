@@ -52,4 +52,8 @@ Rails.application.routes.draw do
     to: "medicines#user_index",
     as: "user_index_medicine"
 
+  get "/doctor",
+    to: "doctors#user_index",
+    as: "user_index_doctor"
+
 end

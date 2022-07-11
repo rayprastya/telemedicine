@@ -1,0 +1,20 @@
+<header>
+      <div class="container">
+          <ul>
+            <div class="header-left">
+              <li><a class="home" href="/">Home</a></li>
+              <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
+              <li><a class="btnnav-article" href="/article">Artikel</a></li>
+              <li><a class="btnnav-contact" href="/medicine">Obat</a></li>
+            </div>
+            <div class="header-right">
+              <% if Current.account%>
+
+                <li><p> <a href="/login">Hello <%= Current.account.username %> !</p></a></li>
+              <% else %>
+              <li><a class="login" href="/login">Login</a></li>
+              <% end %>
+            </div>
+          </ul>
+      </div>
+    </header>
