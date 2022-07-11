@@ -6,6 +6,10 @@ class DoctorsController < ApplicationController
     @doctors = Doctor.all
   end
 
+  def user_index
+    @doctors = Doctor.all
+  end
+
   # GET /doctors/1 or /doctors/1.json
   def show
   end
