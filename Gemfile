@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.1"
+ruby "3.0.3"
 
 gem 'sass-rails'
 
@@ -51,6 +51,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "nokogiri"
+
+gem "zoom_rb"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

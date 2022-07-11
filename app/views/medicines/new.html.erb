@@ -1,0 +1,16 @@
+    <%= render 'admin_page/header' %> 
+
+<br>
+<div class="container">
+ 
+  <h1>New medicine</h1>
+  
+  <%= render "form", medicine: @medicine %>
+  
+  <br>
+  
+  <div>
+    <%= link_to "< Back", medicines_path,class:"btn btn-outline-secondary" %>
+  </div>
+
+</div>

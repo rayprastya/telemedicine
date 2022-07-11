@@ -1,0 +1,29 @@
+    <%= render 'admin_page/header' %> 
+
+<p style="color: green"><%= notice %></p>
+
+<h1 class="title">List Medicines</h1>
+<%= link_to "New medicine", new_medicine_path,class:"btn btn-success",style:" margin-bottom:10px; margin-left:100px;" %>
+<table class="table table-bordered" style="width:55%; margin-left:100px;">
+  <thead class="table-info">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col" colspan="3">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @medicines.each do |medicine| %>
+    <tr>
+      <td><%= medicine.name %></td>
+      <td><%= medicine.description %></td>
+      
+      <td><div class="btn-group">
+              <%= link_to "Edit", edit_medicine_path(medicine),class:"btn btn-outline-warning" %>
+              <%= link_to 'Show', medicine,class:"btn btn-outline-info" %></div></td>
+          <td><%= button_to "Delete", medicine, method: :delete,data: { confirm: 'Are you sure?' },class:"btn btn-outline-danger" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

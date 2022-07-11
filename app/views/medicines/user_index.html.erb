@@ -1,0 +1,36 @@
+
+  <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Telemedicine</title>
+        <link rel="stylesheet" href="/stylesheet/article.css">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <div class="header-left">
+                <li><a class="btnnav-home" href="/">Home</a></li>
+                <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
+                <li><a class="btnnav-article" href="/article">Artikel</a></li>
+                <li><a class="btnnav-contact" href="/contact">Kontak</a></li>
+                </div>
+                <div class="header-right">
+                <li><a class="login" href="/login">Login</a></li>
+                </div>
+            </ul>
+        </header>
+            <div class="medicine-wrapper">
+                <h2>Daftar Obat <span>Kesehatan Mental</span></h3>
+                <div class="medicine-card">
+                    <% @medicines.each do |medicine| %>
+                    <div class="mcard">
+                        <div class="mcard-img">
+                        </div>
+                        <h4><%= medicine.name %></h4>
+                        <h5><%= medicine.description %></h5>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+    </body>
+  </html>

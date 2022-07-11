@@ -34,3 +34,17 @@ user2 = User.create(username:'mamanresing', nama:'rayhan',email:'rayhan.prastya@
 User.last
 quit
 User.last
+Account.all
+Account
+User.all
+User
+Doctor.all
+Doctor.all
+Account
+Account.all
+Account.all
+Article.all
+Article
+exit
+z = Zoom.new
+z.user_list

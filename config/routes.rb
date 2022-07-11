@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :meetings
+  resources :users
+
+  resources :doctors
+  resources :accounts
+  resources :articles
+
+  get 'admin_page/index'
+  resources :medicines
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -30,7 +40,16 @@ Rails.application.routes.draw do
     to: "diagnoses#index",
     as: "Diagnoses_index"
 
-  get "/diagnoses/result",
-    to: "diagnoses_result#index",
-    as: "DiagnosesResult_index"
+  post "/diagnoses/index",
+    to: "diagnoses#result",
+    as: "diagnoses_result"
+
+  get "/article",
+    to: "articles#user_index",
+    as: "user_index_article"
+
+  get "/medicine",
+    to: "medicines#user_index",
+    as: "user_index_medicine"
+
 end

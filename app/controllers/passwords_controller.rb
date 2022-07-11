@@ -4,7 +4,7 @@ class PasswordsController < ApplicationController
     def edit; end
     def update
       # update user password
-      if Current.user.update(password_params)
+      if Current.account.update(password_params)
         redirect_to root_path, notice: 'Password Updated'
       else
         render :edit
@@ -12,6 +12,6 @@ class PasswordsController < ApplicationController
     end
     private
     def password_params
-      params.require(:user).permit(:password, :password_confirmation)
+      params.require(:account).permit(:password)
     end
   end

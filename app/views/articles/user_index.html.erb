@@ -1,0 +1,40 @@
+
+  <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Telemedicine</title>
+        <link rel="stylesheet" href="/stylesheet/article.css">
+    </head>
+    <body>
+        <header>
+            <ul>
+                <div class="header-left">
+                <li><a class="btnnav-home" href="/">Home</a></li>
+                <li><a class="btnnav-telemedicine" href="/telemedicine">Telemedicine</a></li>
+                <li><a class="btnnav-article-home" href="/article" style="color: white;">Artikel</a></li>
+                <li><a class="btnnav-contact" href="/contact">Kontak</a></li>
+                </div>
+                <div class="header-right">
+                <li><a class="login" href="/login">Login</a></li>
+                </div>
+            </ul>
+        </header>
+        <div id="articles-container">
+            <div class="article-wrapper">
+                <h2>Baca artikel <span>Kesehatan Mental</span></h3>
+                <div class="article-card">
+                    <% @articles.each do |article| %>
+                    <div class="acard">
+                        <div class="acard-bottom">
+                            <h3><%= article.title %></h3>
+                            <h4>Kesehatan Mental</h4>
+                        <%# <%= link_to "Show this article", articles, class: "btn-read" %> %>
+                        <%# Bug kalo di klik dia ke halaman admin %>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </body>
+  </html>

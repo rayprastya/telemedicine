@@ -1,0 +1,12 @@
+    <%= render 'admin_page/header' %> 
+<br>
+<div class="container">
+ 
+  <p style="color: green"><%= notice %></p>
+  
+  <%= render @medicine %>
+  
+  <div>
+    <%= link_to "< Back", medicines_path,class:"btn btn-outline-secondary" %>
+  </div>
+</div>
