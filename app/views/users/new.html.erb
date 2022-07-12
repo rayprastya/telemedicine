@@ -1,9 +1,12 @@
-<h1>New user</h1>
-
-<%= render "form", user: @user %>
-
-<br>
-
-<div>
-  <%= link_to "Back to users", users_path %>
+<%= render 'admin_page/header' %> 
+<div class="container">
+  <h1>New user</h1>
+  
+  <%= render "form", user: @user %>
+  
+  <br>
+  
+  <div>
+    <%= link_to "< Back", users_path,class:"btn btn-outline-secondary" %>
+  </div>
 </div>
